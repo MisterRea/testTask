@@ -10,4 +10,8 @@ for i in range(len(word)):
     else:
         d[word[i]]=1
 
-print(d)
+with open('readme.md','w') as f:
+    for key, value in d.items():
+        f.write(f'{key}, {value}\n')
+
+# print(d)
