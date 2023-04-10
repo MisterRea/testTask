@@ -1,13 +1,13 @@
 import json
 import datetime
 
-with open('hh.json') as f:
+with open('testInput.json') as f:
     jsonStr = json.load(f)
 
 def search(dataStr):
     for key, _ in dataStr.items():
         # print(key)
-        if key == 'ID':
+        if key == 'updated':
             dataStr[key] = datetime.datetime.now().isoformat()
             # print('Updated')
         else:
@@ -20,7 +20,7 @@ def search(dataStr):
         
 a = search(jsonStr)
 
-with open('hb.json','w') as f:
+with open('testOutput.json','w') as f:
     json.dump(a,f,indent=4)
 
 
