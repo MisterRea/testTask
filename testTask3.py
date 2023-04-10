@@ -12,6 +12,6 @@ for i in range(len(word)):
 
 with open('readme.md','w') as f:
     for key, value in d.items():
-        f.write(f'{key}, {value}\n')
+        f.write(f'{key} - {value}\n')
 
 # print(d)
